@@ -88,7 +88,7 @@ void swap(int a[], int i, int j){
 }
 
 /**
- * 
+ * stampa l'array
  * @param a
  * @param length
  */
