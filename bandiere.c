@@ -16,6 +16,12 @@ void ordinaColori(int [], int);
 void riempiArrayCasuale(int [], int, int);
 void swap(int [], int, int);
 
+/**
+ * riempie gli elementi dell'array con elementi compresi tra 0 e max
+ * @param a array
+ * @param length lunghezza dell'array
+ * @param max valore massimo
+ */
 void riempiArrayCasuale(int a[], int length, int max){
     srand(time(NULL));
     int i;
@@ -24,6 +30,12 @@ void riempiArrayCasuale(int a[], int length, int max){
         a[i] = rand()%max;
 }
 
+/**
+ * controlla se l'array è ordinato
+ * @param a array
+ * @param length lunghezza dell'array
+ * @return ritorna 0 se non è ordinato 1 altrimenti
+ */
 int ordinatoColori(int a[], int length){
     int i;
     
@@ -31,9 +43,15 @@ int ordinatoColori(int a[], int length){
         if(a[i-1] > a[i])
             return 0;
     }
-    return 0;
+    return 1;
 }
 
+/**
+ * ordina l'array secondo l'algoritmo della bandiera tricolore rosso bianco verde
+ * la parte da ordinare è quella tra il bianco e il verde
+ * @param a array
+ * @param length lunghezza dell'array
+ */
 void ordinaColori(int a[], int length){
     int i, j, k;
     
@@ -56,6 +74,12 @@ void ordinaColori(int a[], int length){
     }
 }
 
+/**
+ * inverte due valori sull'array
+ * @param a
+ * @param i
+ * @param j
+ */
 void swap(int a[], int i, int j){
     int temp;
     temp = a[i];
@@ -63,6 +87,11 @@ void swap(int a[], int i, int j){
     a[j] = temp;
 }
 
+/**
+ * 
+ * @param a
+ * @param length
+ */
 void print(int a[], int length){
     int i;
     printf("stampo l'array\n");
