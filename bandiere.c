@@ -9,7 +9,7 @@
 #include <time.h>
 
 /*
- * 
+ * prototipi di funzioni
  */
 int ordinatoColori(int [], int);
 void ordinaColori(int [], int);
