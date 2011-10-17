@@ -23,6 +23,16 @@ void riempiArrayCasuale(int a[], int length, int max){
         a[i] = rand()%max;
 }
 
+int ordinatoColori(int a[], int length){
+    int i;
+    
+    for(i=1; i<length; i++){
+        if(a[i-1] > a[i])
+            return 0;
+    }
+    return 0;
+}
+
 int main(int argc, char** argv) {
     
     return (EXIT_SUCCESS);
